@@ -24,3 +24,15 @@ export const CUISINES = [
   'Middle Eastern',
   'Mediterranean',
 ]
+
+// Diet / protein-source markers shown on each recipe card.
+export const DIET_TYPES = [
+  { id: 'veg', label: 'Vegetarian', mark: '🌿', isVeg: true },
+  { id: 'egg', label: 'Egg', mark: '🥚', isVeg: false },
+  { id: 'chicken', label: 'Chicken', mark: '🍗', isVeg: false },
+  { id: 'fish', label: 'Fish', mark: '🐟', isVeg: false },
+  { id: 'seafood', label: 'Seafood', mark: '🦐', isVeg: false },
+  { id: 'red_meat', label: 'Red meat', mark: '🥩', isVeg: false },
+]
+
+export const DIET_MAP = Object.fromEntries(DIET_TYPES.map((d) => [d.id, d]))

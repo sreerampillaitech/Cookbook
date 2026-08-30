@@ -1,8 +1,8 @@
 // All recipes default to 1 serving, scaled by the multiplier in the UI.
 // Nutrition figures are reasonable per-serving estimates, not lab values.
-// Add more recipe objects to this array later — same shape each time.
 
 export const RECIPES = [
+  // ---------------- BREAKFAST (egg-based, under 10 min) ----------------
   {
     id: 'kerala-egg-roast',
     name: 'Kerala Egg Roast',
@@ -12,6 +12,7 @@ export const RECIPES = [
     timeMinutes: 9,
     servings: 1,
     tags: ['egg-based', 'quick'],
+    diet: 'egg',
     nutrition: { calories: 320, protein: 16, carbs: 10, fat: 24 },
     ingredients: [
       { name: 'Eggs', qty: 2, unit: 'whole' },
@@ -32,84 +33,6 @@ export const RECIPES = [
     ],
   },
   {
-    id: 'kerala-sambar-rice',
-    name: 'Kerala Sambar Rice',
-    cuisine: 'Kerala',
-    mealType: 'Lunch',
-    goals: ['weight_loss', 'eyesight'],
-    timeMinutes: 35,
-    servings: 1,
-    tags: ['vegetarian', 'heat-retaining'],
-    nutrition: { calories: 420, protein: 14, carbs: 68, fat: 9 },
-    ingredients: [
-      { name: 'Toor dal, cooked', qty: 0.5, unit: 'cup' },
-      { name: 'Mixed vegetables (carrot, drumstick, pumpkin)', qty: 1, unit: 'cup' },
-      { name: 'Tamarind pulp', qty: 1, unit: 'tbsp' },
-      { name: 'Sambar powder', qty: 1.5, unit: 'tsp' },
-      { name: 'Mustard seeds', qty: 0.5, unit: 'tsp' },
-      { name: 'Curry leaves', qty: 1, unit: 'sprig' },
-      { name: 'Coconut oil', qty: 1, unit: 'tsp' },
-      { name: 'Cooked rice', qty: 1, unit: 'cup' },
-    ],
-    steps: [
-      'Boil the mixed vegetables until fork-tender in a little water.',
-      'Add cooked dal, tamarind pulp, sambar powder, and salt, simmer 10 minutes.',
-      'Temper mustard seeds and curry leaves in coconut oil, pour over the sambar.',
-      'Pack hot rice and sambar in separate compartments of an insulated tiffin so it stays warm 6–7 hours.',
-    ],
-  },
-  {
-    id: 'kerala-fish-curry',
-    name: 'Kerala Fish Curry (Meen Curry)',
-    cuisine: 'Kerala',
-    mealType: 'Dinner',
-    goals: ['b12_d3', 'eyesight', 'hair_growth'],
-    timeMinutes: 30,
-    servings: 1,
-    tags: ['non-veg'],
-    nutrition: { calories: 340, protein: 30, carbs: 8, fat: 20 },
-    ingredients: [
-      { name: 'Fish steaks (kingfish or pomfret)', qty: 150, unit: 'g' },
-      { name: 'Kudampuli (gambooge), soaked', qty: 2, unit: 'pieces' },
-      { name: 'Kashmiri chilli powder', qty: 1, unit: 'tsp' },
-      { name: 'Coriander powder', qty: 1, unit: 'tsp' },
-      { name: 'Coconut milk', qty: 0.5, unit: 'cup' },
-      { name: 'Shallots, sliced', qty: 3, unit: 'whole' },
-      { name: 'Curry leaves', qty: 1, unit: 'sprig' },
-      { name: 'Coconut oil', qty: 1, unit: 'tbsp' },
-    ],
-    steps: [
-      'Heat coconut oil, soften shallots and curry leaves.',
-      'Add chilli and coriander powder, cook 30 seconds, then add kudampuli with its soaking water.',
-      'Add fish and enough water to just cover, simmer gently 10–12 minutes without stirring hard.',
-      'Pour in coconut milk, warm through without boiling, and rest 10 minutes before serving.',
-    ],
-  },
-  {
-    id: 'turmeric-golden-milk',
-    name: 'Turmeric Golden Milk',
-    cuisine: 'North Indian',
-    mealType: 'Snack',
-    goals: ['grey_hair', 'strength'],
-    timeMinutes: 6,
-    servings: 1,
-    tags: ['before-bed', 'quick'],
-    nutrition: { calories: 130, protein: 6, carbs: 12, fat: 7 },
-    ingredients: [
-      { name: 'Milk (or plant milk)', qty: 1, unit: 'cup' },
-      { name: 'Turmeric powder', qty: 0.5, unit: 'tsp' },
-      { name: 'Black pepper', qty: 1, unit: 'pinch' },
-      { name: 'Ghee', qty: 0.5, unit: 'tsp' },
-      { name: 'Honey', qty: 1, unit: 'tsp' },
-    ],
-    steps: [
-      'Warm the milk in a small pan, do not boil.',
-      'Whisk in turmeric, black pepper, and ghee.',
-      'Simmer gently for 2 minutes to let the turmeric infuse.',
-      'Remove from heat, stir in honey once slightly cooled, and drink warm before bed.',
-    ],
-  },
-    {
     id: 'shakshuka-quick',
     name: 'Quick Shakshuka Cups',
     cuisine: 'Middle Eastern',
@@ -118,6 +41,7 @@ export const RECIPES = [
     timeMinutes: 8,
     servings: 1,
     tags: ['egg-based', 'quick'],
+    diet: 'egg',
     nutrition: { calories: 260, protein: 15, carbs: 12, fat: 17 },
     ingredients: [
       { name: 'Eggs', qty: 2, unit: 'whole' },
@@ -144,6 +68,7 @@ export const RECIPES = [
     timeMinutes: 7,
     servings: 1,
     tags: ['egg-based', 'quick'],
+    diet: 'egg',
     nutrition: { calories: 240, protein: 14, carbs: 4, fat: 18 },
     ingredients: [
       { name: 'Eggs', qty: 3, unit: 'whole' },
@@ -159,6 +84,36 @@ export const RECIPES = [
       'Repeat until the egg is used up, then roll into a log, slice, and serve.',
     ],
   },
+
+  // ---------------- LUNCH (vegetarian Mon–Fri, heat-retaining) ----------------
+  {
+    id: 'kerala-sambar-rice',
+    name: 'Kerala Sambar Rice',
+    cuisine: 'Kerala',
+    mealType: 'Lunch',
+    goals: ['weight_loss', 'eyesight'],
+    timeMinutes: 35,
+    servings: 1,
+    tags: ['vegetarian', 'heat-retaining'],
+    diet: 'veg',
+    nutrition: { calories: 420, protein: 14, carbs: 68, fat: 9 },
+    ingredients: [
+      { name: 'Toor dal, cooked', qty: 0.5, unit: 'cup' },
+      { name: 'Mixed vegetables (carrot, drumstick, pumpkin)', qty: 1, unit: 'cup' },
+      { name: 'Tamarind pulp', qty: 1, unit: 'tbsp' },
+      { name: 'Sambar powder', qty: 1.5, unit: 'tsp' },
+      { name: 'Mustard seeds', qty: 0.5, unit: 'tsp' },
+      { name: 'Curry leaves', qty: 1, unit: 'sprig' },
+      { name: 'Coconut oil', qty: 1, unit: 'tsp' },
+      { name: 'Cooked rice', qty: 1, unit: 'cup' },
+    ],
+    steps: [
+      'Boil the mixed vegetables until fork-tender in a little water.',
+      'Add cooked dal, tamarind pulp, sambar powder, and salt, simmer 10 minutes.',
+      'Temper mustard seeds and curry leaves in coconut oil, pour over the sambar.',
+      'Pack hot rice and sambar in separate compartments of an insulated tiffin so it stays warm 6–7 hours.',
+    ],
+  },
   {
     id: 'rajma-chawal',
     name: 'Rajma Chawal',
@@ -168,6 +123,7 @@ export const RECIPES = [
     timeMinutes: 40,
     servings: 1,
     tags: ['vegetarian', 'heat-retaining'],
+    diet: 'veg',
     nutrition: { calories: 480, protein: 20, carbs: 78, fat: 8 },
     ingredients: [
       { name: 'Kidney beans, soaked and boiled', qty: 1, unit: 'cup' },
@@ -194,6 +150,7 @@ export const RECIPES = [
     timeMinutes: 30,
     servings: 1,
     tags: ['vegetarian', 'heat-retaining'],
+    diet: 'veg',
     nutrition: { calories: 390, protein: 15, carbs: 52, fat: 12 },
     ingredients: [
       { name: 'Chickpeas, boiled', qty: 1, unit: 'cup' },
@@ -211,6 +168,36 @@ export const RECIPES = [
       'Stir in spinach until wilted, finish with lemon juice, and pack hot for a long-hold lunch box.',
     ],
   },
+
+  // ---------------- DINNER (non-veg, multiple cuisines) ----------------
+  {
+    id: 'kerala-fish-curry',
+    name: 'Kerala Fish Curry (Meen Curry)',
+    cuisine: 'Kerala',
+    mealType: 'Dinner',
+    goals: ['b12_d3', 'eyesight', 'hair_growth'],
+    timeMinutes: 30,
+    servings: 1,
+    tags: ['non-veg'],
+    diet: 'fish',
+    nutrition: { calories: 340, protein: 30, carbs: 8, fat: 20 },
+    ingredients: [
+      { name: 'Fish steaks (kingfish or pomfret)', qty: 150, unit: 'g' },
+      { name: 'Kudampuli (gambooge), soaked', qty: 2, unit: 'pieces' },
+      { name: 'Kashmiri chilli powder', qty: 1, unit: 'tsp' },
+      { name: 'Coriander powder', qty: 1, unit: 'tsp' },
+      { name: 'Coconut milk', qty: 0.5, unit: 'cup' },
+      { name: 'Shallots, sliced', qty: 3, unit: 'whole' },
+      { name: 'Curry leaves', qty: 1, unit: 'sprig' },
+      { name: 'Coconut oil', qty: 1, unit: 'tbsp' },
+    ],
+    steps: [
+      'Heat coconut oil, soften shallots and curry leaves.',
+      'Add chilli and coriander powder, cook 30 seconds, then add kudampuli with its soaking water.',
+      'Add fish and enough water to just cover, simmer gently 10–12 minutes without stirring hard.',
+      'Pour in coconut milk, warm through without boiling, and rest 10 minutes before serving for the flavour to settle.',
+    ],
+  },
   {
     id: 'korean-bulgogi',
     name: 'Korean Beef Bulgogi',
@@ -220,6 +207,7 @@ export const RECIPES = [
     timeMinutes: 25,
     servings: 1,
     tags: ['non-veg'],
+    diet: 'red_meat',
     nutrition: { calories: 410, protein: 32, carbs: 18, fat: 22 },
     ingredients: [
       { name: 'Beef, thinly sliced', qty: 150, unit: 'g' },
@@ -246,6 +234,7 @@ export const RECIPES = [
     timeMinutes: 20,
     servings: 1,
     tags: ['non-veg'],
+    diet: 'chicken',
     nutrition: { calories: 350, protein: 34, carbs: 14, fat: 16 },
     ingredients: [
       { name: 'Chicken, minced', qty: 150, unit: 'g' },
@@ -273,6 +262,7 @@ export const RECIPES = [
     timeMinutes: 30,
     servings: 1,
     tags: ['non-veg'],
+    diet: 'chicken',
     nutrition: { calories: 400, protein: 35, carbs: 24, fat: 17 },
     ingredients: [
       { name: 'Chicken thigh, boneless', qty: 150, unit: 'g' },
@@ -299,6 +289,7 @@ export const RECIPES = [
     timeMinutes: 20,
     servings: 1,
     tags: ['non-veg'],
+    diet: 'fish',
     nutrition: { calories: 380, protein: 32, carbs: 8, fat: 24 },
     ingredients: [
       { name: 'Salmon fillet', qty: 150, unit: 'g' },
@@ -324,6 +315,7 @@ export const RECIPES = [
     timeMinutes: 15,
     servings: 1,
     tags: ['non-veg', 'quick'],
+    diet: 'seafood',
     nutrition: { calories: 290, protein: 28, carbs: 10, fat: 15 },
     ingredients: [
       { name: 'Prawns, cleaned', qty: 150, unit: 'g' },
@@ -340,6 +332,33 @@ export const RECIPES = [
       'Finish with spring onion and serve immediately over rice or noodles.',
     ],
   },
+
+  // ---------------- SNACKS & BEFORE-BED DRINKS ----------------
+  {
+    id: 'turmeric-golden-milk',
+    name: 'Turmeric Golden Milk',
+    cuisine: 'North Indian',
+    mealType: 'Snack',
+    goals: ['grey_hair', 'strength'],
+    timeMinutes: 6,
+    servings: 1,
+    tags: ['before-bed', 'quick'],
+    diet: 'veg',
+    nutrition: { calories: 130, protein: 6, carbs: 12, fat: 7 },
+    ingredients: [
+      { name: 'Milk (or plant milk)', qty: 1, unit: 'cup' },
+      { name: 'Turmeric powder', qty: 0.5, unit: 'tsp' },
+      { name: 'Black pepper', qty: 1, unit: 'pinch' },
+      { name: 'Ghee', qty: 0.5, unit: 'tsp' },
+      { name: 'Honey', qty: 1, unit: 'tsp' },
+    ],
+    steps: [
+      'Warm the milk in a small pan, do not boil.',
+      'Whisk in turmeric, black pepper, and ghee.',
+      'Simmer gently for 2 minutes to let the turmeric infuse.',
+      'Remove from heat, stir in honey once slightly cooled, and drink warm before bed.',
+    ],
+  },
   {
     id: 'roasted-makhana',
     name: 'Roasted Makhana (Fox Nuts)',
@@ -349,6 +368,7 @@ export const RECIPES = [
     timeMinutes: 10,
     servings: 1,
     tags: ['quick'],
+    diet: 'veg',
     nutrition: { calories: 150, protein: 5, carbs: 20, fat: 6 },
     ingredients: [
       { name: 'Makhana (fox nuts)', qty: 1, unit: 'cup' },
@@ -372,6 +392,7 @@ export const RECIPES = [
     timeMinutes: 8,
     servings: 1,
     tags: ['quick'],
+    diet: 'veg',
     nutrition: { calories: 180, protein: 11, carbs: 26, fat: 4 },
     ingredients: [
       { name: 'Moong sprouts', qty: 1, unit: 'cup' },
@@ -396,6 +417,7 @@ export const RECIPES = [
     timeMinutes: 10,
     servings: 4,
     tags: ['no-cook'],
+    diet: 'veg',
     nutrition: { calories: 110, protein: 3, carbs: 14, fat: 6 },
     ingredients: [
       { name: 'Dates, pitted', qty: 10, unit: 'whole' },
