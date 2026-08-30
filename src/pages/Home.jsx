@@ -4,7 +4,7 @@ import RecipeCard from '../components/RecipeCard'
 import FilterBar from '../components/FilterBar'
 
 export default function Home() {
-  const [filters, setFilters] = useState({ mealType: '', cuisine: '', goal: '', search: '' })
+  const [filters, setFilters] = useState({ mealType: '', cuisine: '', goal: '', diet: '', search: '' })
 
   const filtered = useMemo(() => {
     const q = filters.search.trim().toLowerCase()
@@ -12,6 +12,8 @@ export default function Home() {
       if (filters.mealType && r.mealType !== filters.mealType) return false
       if (filters.cuisine && r.cuisine !== filters.cuisine) return false
       if (filters.goal && !r.goals.includes(filters.goal)) return false
+      if (filters.diet === 'veg' && r.diet !== 'veg') return false
+      if (filters.diet === 'non-veg' && r.diet === 'veg') return false
       if (q) {
         const hay = [r.name, r.cuisine, ...r.ingredients.map((i) => i.name)]
           .join(' ')

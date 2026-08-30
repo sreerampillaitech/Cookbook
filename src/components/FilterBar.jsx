@@ -1,5 +1,10 @@
 import { CUISINES, MEAL_TYPES, GOALS } from '../data/goals'
 
+const DIET_FILTER_OPTIONS = [
+  { value: 'veg', label: 'Vegetarian' },
+  { value: 'non-veg', label: 'Non-vegetarian' },
+]
+
 function Select({ label, value, onChange, options }) {
   return (
     <label className="flex flex-col gap-1 text-sm">
@@ -35,6 +40,7 @@ export default function FilterBar({ filters, setFilters }) {
         onChange={update('goal')}
         options={GOALS.map((g) => ({ value: g.id, label: g.label }))}
       />
+      <Select label="Diet" value={filters.diet} onChange={update('diet')} options={DIET_FILTER_OPTIONS} />
       <div className="flex-1 min-w-[10rem]">
         <label className="flex flex-col gap-1 text-sm">
           <span className="font-mono text-xs uppercase tracking-wide text-[var(--ink-soft)]">
@@ -49,9 +55,9 @@ export default function FilterBar({ filters, setFilters }) {
           />
         </label>
       </div>
-      {(filters.mealType || filters.cuisine || filters.goal || filters.search) && (
+      {(filters.mealType || filters.cuisine || filters.goal || filters.diet || filters.search) && (
         <button
-          onClick={() => setFilters({ mealType: '', cuisine: '', goal: '', search: '' })}
+          onClick={() => setFilters({ mealType: '', cuisine: '', goal: '', diet: '', search: '' })}
           className="text-sm font-mono underline decoration-dashed underline-offset-4 text-[var(--ink-soft)] hover:text-[var(--ink)] pb-1.5"
         >
           Clear filters
