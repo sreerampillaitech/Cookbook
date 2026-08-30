@@ -16,11 +16,17 @@ export const MEAL_TYPES = ['Breakfast', 'Lunch', 'Dinner', 'Snack']
 export const CUISINES = [
   'Kerala',
   'North Indian',
+  'South Indian',
   'Continental',
   'Japanese',
   'Korean',
   'Thai',
   'Chinese',
+  'Vietnamese',
+  'Indonesian',
+  'Malaysian',
+  'Singaporean',
+  'Tibetan',
   'Middle Eastern',
   'Mediterranean',
 ]
