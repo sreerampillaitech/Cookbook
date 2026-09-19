@@ -1,5 +1,6 @@
 import { CUISINES, MEAL_TYPES, GOALS } from '../data/goals'
 
+const MAX_CALORIE_LIMIT = 800
 const DIET_FILTER_OPTIONS = [
   { value: 'veg', label: 'Vegetarian' },
   { value: 'non-veg', label: 'Non-vegetarian' },
@@ -41,6 +42,20 @@ export default function FilterBar({ filters, setFilters }) {
         options={GOALS.map((g) => ({ value: g.id, label: g.label }))}
       />
       <Select label="Diet" value={filters.diet} onChange={update('diet')} options={DIET_FILTER_OPTIONS} />
+            <div className="flex flex-col gap-1 text-sm min-w-[12rem]">
+        <span className="font-mono text-xs uppercase tracking-wide text-[var(--ink-soft)]">
+          Up to {filters.maxCalories} kcal
+        </span>
+        <input
+          type="range"
+          min="100"
+          max={MAX_CALORIE_LIMIT}
+          step="10"
+          value={filters.maxCalories}
+          onChange={(e) => update('maxCalories')(Number(e.target.value))}
+          className="accent-[var(--teal)]"
+        />
+      </div>
       <div className="flex-1 min-w-[10rem]">
         <label className="flex flex-col gap-1 text-sm">
           <span className="font-mono text-xs uppercase tracking-wide text-[var(--ink-soft)]">
