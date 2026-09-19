@@ -4,21 +4,32 @@ import arabianChickenKabsaRice from './arabian-chicken-kabsa-rice'
 import arabianVegBiryani from './arabian-veg-biryani'
 import avialRice from './avial-rice'
 import bakedChickenThighsVeg from './baked-chicken-thighs-veg'
+import bakedChilaquilesEggs from './baked-chilaquiles-eggs'
+import bakedFishTacosSalsa from './baked-fish-tacos-salsa'
 import bakedLemonHerbChicken from './baked-lemon-herb-chicken'
 import bakedSalmonSweetPotato from './baked-salmon-sweet-potato'
+import bakedSalsaChicken from './baked-salsa-chicken'
 import bananaWalnuts from './banana-walnuts'
+import blackBeanTacos from './black-bean-tacos'
 import boiledEggCucumberSlices from './boiled-egg-cucumber-slices'
 import boiledEggsAvocadoToast from './boiled-eggs-avocado-toast'
 import brownRiceBuddhaBowl from './brown-rice-buddha-bowl'
 import chanaMasalaRice from './chana-masala-rice'
+import chickenBurritoBowl from './chicken-burrito-bowl'
+import chickenCacciatore from './chicken-cacciatore'
 import chickenCaesarSalad from './chicken-caesar-salad'
 import chickenDalRice from './chicken-dal-rice'
+import chickenEnchiladasBaked from './chicken-enchiladas-baked'
 import chickenKeemaRoti from './chicken-keema-roti'
+import chickenPiccataPasta from './chicken-piccata-pasta'
+import chickenPozole from './chicken-pozole'
 import chickenSaagRice from './chicken-saag-rice'
+import chickenSalsaVerde from './chicken-salsa-verde'
 import chickenSoupBread from './chicken-soup-bread'
 import chickenStewRice from './chicken-stew-rice'
 import chickenStirFryRiceDinner from './chicken-stir-fry-rice-dinner'
 import chickenTikkaMasalaRoti from './chicken-tikka-masala-roti'
+import chickenTinga from './chicken-tinga'
 import chickenVindalooRice from './chicken-vindaloo-rice'
 import chineseGingerSteamedFishRice from './chinese-ginger-steamed-fish-rice'
 import chineseSteamedFishBokChoy from './chinese-steamed-fish-bok-choy'
@@ -49,15 +60,25 @@ import greekSaladBoiledEggs from './greek-salad-boiled-eggs'
 import greekYogurtMixedNuts from './greek-yogurt-mixed-nuts'
 import grilledChickenQuinoaSalad from './grilled-chicken-quinoa-salad'
 import grilledFishRoastedVeg from './grilled-fish-roasted-veg'
+import huevosRancheros from './huevos-rancheros'
 import hummusCarrotSticks from './hummus-carrot-sticks'
 import hummusVeggieWrap from './hummus-veggie-wrap'
 import indonesianChickenSatayRice from './indonesian-chicken-satay-rice'
 import indonesianNasiGoreng from './indonesian-nasi-goreng'
 import israeliBakedChickenVeg from './israeli-baked-chicken-veg'
 import israeliShakshukaLunch from './israeli-shakshuka-lunch'
+import italianBakedFishTomatoes from './italian-baked-fish-tomatoes'
+import italianBakedSalmonCapers from './italian-baked-salmon-capers'
 import italianBakedSalmonVeg from './italian-baked-salmon-veg'
 import italianChickenPiccataPasta from './italian-chicken-piccata-pasta'
+import italianChickpeaSoup from './italian-chickpea-soup'
+import italianFrittataVegetables from './italian-frittata-vegetables'
+import italianHerbBakedChicken from './italian-herb-baked-chicken'
 import italianHerbBakedFishSalad from './italian-herb-baked-fish-salad'
+import italianHerbOmelette from './italian-herb-omelette'
+import italianLentilSoup from './italian-lentil-soup'
+import italianPastaPrimavera from './italian-pasta-primavera'
+import italianStuffedPeppersChicken from './italian-stuffed-peppers-chicken'
 import japaneseDonburiBowl from './japanese-donburi-bowl'
 import japaneseMisoGlazedFishRice from './japanese-miso-glazed-fish-rice'
 import japaneseMisoSoupRice from './japanese-miso-soup-rice'
@@ -86,6 +107,10 @@ import matarPaneerRice from './matar-paneer-rice'
 import mediterraneanBakedChickenQuinoa from './mediterranean-baked-chicken-quinoa'
 import mediterraneanChickpeaStew from './mediterranean-chickpea-stew'
 import meenVattichathuRice from './meen-vattichathu-rice'
+import mexicanChickenSoup from './mexican-chicken-soup'
+import mexicanEggBeanBurrito from './mexican-egg-bean-burrito'
+import mexicanLentilSoup from './mexican-lentil-soup'
+import mexicanQuinoaBowl from './mexican-quinoa-bowl'
 import mexicanScrambledEggs from './mexican-scrambled-eggs'
 import middleEasternShawarmaBowl from './middle-eastern-shawarma-bowl'
 import minestroneSoupBread from './minestrone-soup-bread'
@@ -104,14 +129,17 @@ import paneerBhurjiParathaLunch from './paneer-bhurji-paratha-lunch'
 import paneerButterMasalaRoti from './paneer-butter-masala-roti'
 import paneerTikkaMasalaRoti from './paneer-tikka-masala-roti'
 import pastaArrabiata from './pasta-arrabiata'
+import pastaEFagioli from './pasta-e-fagioli'
 import persianHerbFrittata from './persian-herb-frittata'
 import persianRiceHerbs from './persian-rice-herbs'
 import plainPopcornCoconutWater from './plain-popcorn-coconut-water'
+import polloAsado from './pollo-asado'
 import quinoaSaladBowl from './quinoa-salad-bowl'
 import rasamRice from './rasam-rice'
 import roastedMakhana from './roasted-makhana'
 import sardineCurryRice from './sardine-curry-rice'
 import shakshukaQuick from './shakshuka-quick'
+import sicilianBakedFishOlives from './sicilian-baked-fish-olives'
 import singaporeanEggFriedRice from './singaporean-egg-fried-rice'
 import spanishArrozConPollo from './spanish-arroz-con-pollo'
 import spanishGarlicChickenRice from './spanish-garlic-chicken-rice'
@@ -129,9 +157,11 @@ import turkishChickenShishRice from './turkish-chicken-shish-rice'
 import turkishEggsCilbir from './turkish-eggs-cilbir'
 import turkishLentilSoup from './turkish-lentil-soup'
 import turmericGoldenMilk from './turmeric-golden-milk'
+import veggieFajitaBowl from './veggie-fajita-bowl'
 import vietnamesePhoChicken from './vietnamese-pho-chicken'
 import vietnameseSpringRollBowl from './vietnamese-spring-roll-bowl'
 import walnutDateBites from './walnut-date-bites'
+import wholeWheatPastaArrabiata from './whole-wheat-pasta-arrabiata'
 import wholeWheatPastaPrimavera from './whole-wheat-pasta-primavera'
 
 export const RECIPES = [
@@ -141,21 +171,32 @@ export const RECIPES = [
   arabianVegBiryani,
   avialRice,
   bakedChickenThighsVeg,
+  bakedChilaquilesEggs,
+  bakedFishTacosSalsa,
   bakedLemonHerbChicken,
   bakedSalmonSweetPotato,
+  bakedSalsaChicken,
   bananaWalnuts,
+  blackBeanTacos,
   boiledEggCucumberSlices,
   boiledEggsAvocadoToast,
   brownRiceBuddhaBowl,
   chanaMasalaRice,
+  chickenBurritoBowl,
+  chickenCacciatore,
   chickenCaesarSalad,
   chickenDalRice,
+  chickenEnchiladasBaked,
   chickenKeemaRoti,
+  chickenPiccataPasta,
+  chickenPozole,
   chickenSaagRice,
+  chickenSalsaVerde,
   chickenSoupBread,
   chickenStewRice,
   chickenStirFryRiceDinner,
   chickenTikkaMasalaRoti,
+  chickenTinga,
   chickenVindalooRice,
   chineseGingerSteamedFishRice,
   chineseSteamedFishBokChoy,
@@ -186,15 +227,25 @@ export const RECIPES = [
   greekYogurtMixedNuts,
   grilledChickenQuinoaSalad,
   grilledFishRoastedVeg,
+  huevosRancheros,
   hummusCarrotSticks,
   hummusVeggieWrap,
   indonesianChickenSatayRice,
   indonesianNasiGoreng,
   israeliBakedChickenVeg,
   israeliShakshukaLunch,
+  italianBakedFishTomatoes,
+  italianBakedSalmonCapers,
   italianBakedSalmonVeg,
   italianChickenPiccataPasta,
+  italianChickpeaSoup,
+  italianFrittataVegetables,
+  italianHerbBakedChicken,
   italianHerbBakedFishSalad,
+  italianHerbOmelette,
+  italianLentilSoup,
+  italianPastaPrimavera,
+  italianStuffedPeppersChicken,
   japaneseDonburiBowl,
   japaneseMisoGlazedFishRice,
   japaneseMisoSoupRice,
@@ -223,6 +274,10 @@ export const RECIPES = [
   mediterraneanBakedChickenQuinoa,
   mediterraneanChickpeaStew,
   meenVattichathuRice,
+  mexicanChickenSoup,
+  mexicanEggBeanBurrito,
+  mexicanLentilSoup,
+  mexicanQuinoaBowl,
   mexicanScrambledEggs,
   middleEasternShawarmaBowl,
   minestroneSoupBread,
@@ -241,14 +296,17 @@ export const RECIPES = [
   paneerButterMasalaRoti,
   paneerTikkaMasalaRoti,
   pastaArrabiata,
+  pastaEFagioli,
   persianHerbFrittata,
   persianRiceHerbs,
   plainPopcornCoconutWater,
+  polloAsado,
   quinoaSaladBowl,
   rasamRice,
   roastedMakhana,
   sardineCurryRice,
   shakshukaQuick,
+  sicilianBakedFishOlives,
   singaporeanEggFriedRice,
   spanishArrozConPollo,
   spanishGarlicChickenRice,
@@ -266,8 +324,10 @@ export const RECIPES = [
   turkishEggsCilbir,
   turkishLentilSoup,
   turmericGoldenMilk,
+  veggieFajitaBowl,
   vietnamesePhoChicken,
   vietnameseSpringRollBowl,
   walnutDateBites,
+  wholeWheatPastaArrabiata,
   wholeWheatPastaPrimavera,
 ]
